@@ -10,6 +10,14 @@ namespace ClassRoom
     {
         static void Main(string[] args)
         {
+            ClassRoom OurClass = new ClassRoom();
+            OurClass.ClassName = "Computer Science Semester 3";
+            OurClass.SemesterStart = new DateTime(2020,08,24);
+            OurClass.ClassList = new List<Student>()
+            {
+                new Student("Andreas", 7, 2),
+                new Student("Justin", 12, 31)
+            };
         }
     }
 }
