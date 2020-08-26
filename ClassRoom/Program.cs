@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace ClassRoom
             OurClass.ClassList = new List<Student>()
             {
                 new Student("Andreas", 7, 2),
+                new Student("Dominik", 11, 9),
+
                 new Student("Justin", 12, 31)
             };
 
@@ -29,36 +32,11 @@ namespace ClassRoom
               
             }
 
+           OurClass.CountStudents();
+
             Console.WriteLine("\n\nPress any key to close the application...");
             Console.ReadKey();
 
-        }
-
-        public string Season(int monthOfBirth)
-        {
-
-            if (monthOfBirth == 12 || monthOfBirth ==1 || monthOfBirth ==2 )
-            {
-                return "Winter";
-            }
-
-
-            if (monthOfBirth == 3 || monthOfBirth == 4 || monthOfBirth == 5)
-            {
-                return "Spring";
-            }
-
-            if (monthOfBirth == 6 || monthOfBirth == 7 || monthOfBirth == 8)
-            {
-                return "Summer";
-            }
-
-            if (monthOfBirth == 9 || monthOfBirth == 10 || monthOfBirth == 11)
-            {
-                return "Autumn";
-            }
-
-            return "This dude was born in an impossible time.";
         }
 
 
